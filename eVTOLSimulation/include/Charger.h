@@ -1,15 +1,14 @@
 #ifndef CHARGER
 #define CHARGER
 
-#include <pthread.h>
+#include<atomic>
 
 //This class controls the simulation resource: chargers ; using the semaphore methodology
 class Charger
 {
 private:
-	int mVal;
 	int mMaxCount;
-	pthread_mutex_t mMutex;
+ 	std::atomic<int> mCount;
 
 
 public:
