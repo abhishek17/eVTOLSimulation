@@ -91,7 +91,7 @@ bool SimManager:: Run(float TimeToRunSimSeconds, float RealToSimulatedSeconds)
 			ThdData[i]->mDeltaSimulatedTimeHour = (Time::GetSecondsElapsedThisFrame() * RealToSimulatedSeconds) / 3600.f;
 			ThdData[i]->mPlane = mFleet[i];
 
-			pthread_create(&(mAircraftThreads[i]), NULL, &ThreadedSim, (void*)(ThdData[i]));
+			pthread_create(&(mAircraftThreads[i]), NULL, &ThreadedSim, reinterpret_cast<void*>(ThdData[i]));
 
 		}
 
