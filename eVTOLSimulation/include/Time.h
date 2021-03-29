@@ -10,11 +10,7 @@ namespace Time
 	float GetSecondsElapsedThisFrame();
 
 	void OnNewFrame();
-
-	// Initialization / Shut Down
-	//---------------------------
-
-	bool Initialize( );
+	void Initialize();
 }
 
 #endif //TIME

@@ -36,6 +36,9 @@ bool SimManager::Init()
 	mCompanies[3].SetCompany(Company::Delta);
 	mCompanies[4].SetCompany(Company::Echo);
 
+	//Initalize time
+	Time::Initialize();
+
 	//Deploy aircrafts
 	for (unsigned int i = 0; i < NUM_VEHICLES_DEPLOYED; i++)
 	{
